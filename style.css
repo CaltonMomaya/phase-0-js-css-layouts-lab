@@ -1,0 +1,54 @@
+/* cat breed conntainer */
+.cat-container {
+    display: flex;              /* Use flexbox */
+    flex-wrap: wrap;            /* Allow wrapping */
+    justify-content: space-around; /* Space cards evenly */
+    padding: 2em;               /* Add padding */
+}
+
+/* Style each cat breed card */
+.cat-breed {
+    flex: 1 1 300px;            /* Flex-grow, flex-shrink, base width */
+    margin: 1em;                /* Space between cards */
+    padding: 1em;               /* Inner spacing */
+    border: 1px solid #ddd;     /* Light border */
+    border-radius: 8px;         /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    text-align: center;         /* Center text */
+    transition: transform 0.3s; /* Smooth hover scaling */
+}
+
+/* Style images inside cards */
+.cat-breed img {
+    max-width: 100%;            /* Fit within card */
+    height: auto;               /* Maintain aspect ratio */
+    border-radius: 8px;         /* Rounded corners */
+}
+
+/* Headings inside cards */
+.cat-breed h3 {
+    margin: 0.5em 0;
+}
+
+/* Paragraphs inside cards */
+.cat-breed p {
+    margin: 0.5em 0 1em;
+}
+
+/* Hover effect for cat breed cards */
+.cat-breed:hover {
+    transform: scale(1.05);     /* Slightly enlarge on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .cat-container {
+        flex-direction: column;   /* Stack cards vertically */
+        align-items: center;      /* Center cards */
+    }
+
+    .cat-breed {
+        flex: 1 1 100%;           /* Take full width */
+        max-width: 100%;          /* Ensure no overflow */
+    }
+}
